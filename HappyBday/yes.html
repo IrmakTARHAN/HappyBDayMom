@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>evet</title>
+    <link rel="stylesheet" href="yes.css">
+    <link rel="stylesheet" href="happyBday.css">
+</head>
+<body>
+    
+    <div class="cont">
+        <div class="kadar">
+            <h2>Ne kadar <span>seviyorsun?</span></h2>
+            <a id="no">çok seviyorum</a>
+            <a id="çok" href="çok.html">evren kadar hatta anlatamayacağım kadar çok seviyorum</a>
+        </div>
+    </div>
+    <div id="hearts-container"></div>
+<script>
+    // Daha fazla kalp ekle
+    for (let i = 0; i < 50; i++) {
+        const heart = document.createElement('div');
+        heart.className = 'hearts';
+        heart.innerHTML = '♥';
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.top = Math.random() * 100 + 'vh';
+        heart.style.animationDelay = Math.random() * 2 + 's';
+        document.getElementById('hearts-container').appendChild(heart);
+    }
+</script>
+
+</body>
+</html>
